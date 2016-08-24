@@ -1,6 +1,6 @@
 (function() {
   // get the modal script
-  var modalScript = document.querySelectorAll('script[src*=testModal]');
+  var modalScript = document.querySelectorAll('script[src*=https://rawgit.com/adamhundley/embed_playground/master/bottom_modal/testModal.js]');
   
   // get the shortname data from the script
   var shortname = modalScript[0].getAttribute('data-shortname');
@@ -19,6 +19,7 @@
     '#modal-content{color:white; position: fixed; background-color: '+backgroundColor+
     '; width: 100%; padding-bottom: 15px;}' +
 
+    //Sytle Close X
     '#close{ display: block; color: blue; font-color: blue; float: right; margin-top: 5px; margin-right: 5px; padding: 3px; font-size: 28px; font-weight: bold; background-color: white; border-radius: 30px; -moz-border-radius: 30px; }'+
     
     //Slide in CSS
@@ -30,12 +31,13 @@
     '.hidden {bottom: 0px; animation: hidden 2s both; -webkit-animation: hidden 2s both;}' +
     '@keyframes hidden { 100% {bottom: -300px}}'+
     '@-webkit-keyframes hidden { 100% {bottom: -300px}}'+
-
     '</style>';
   
   var createFlyUpModal = function() {
+    // cover screen with modal
     var modalContainer = document.createElement('div');
     modalContainer.id = 'fareharbor-modal';
+    // insert actual modal
     modalContainer.innerHTML = modalStyle + '<div id="modal-content"><span id="close"> x </span><center><h2 id="modal-header">Advanced Purchase Required' + '</h2><table><tr><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/" class="fh-button" onclick="return !(window.FH && FH.open({ shortname:\'' + shortname + '\', fallback:\'simple\', view:\'items\' }));">Book Now</a></td><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/items/calendar/" onclick="return !(window.FH && FH.open({ shortname:\''+shortname+'\', fallback: \'simple\', view: \'all-availability\' }));" class="fh-button-red fh-button--cal">View Calendar</a></td></tr></table></center></div>'
 
     // add the modal to the page
@@ -55,5 +57,5 @@
 
   // When the user clicks on (x), close the modal
   close.onclick = function() { modalContent.className="hidden" }
-  
+
 })();
