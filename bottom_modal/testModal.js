@@ -1,12 +1,12 @@
 (function() {
   // get the modal script
-  var modalScript = document.querySelectorAll('script[src*=https://rawgit.com/adamhundley/embed_playground/master/bottom_modal/testModal.js]');
+  var modalScript = document.getElementById('modal_script');
   
   // get the shortname data from the script
-  var shortname = modalScript[0].getAttribute('data-shortname');
+  var shortname = modalScript.getAttribute('data-shortname');
 
   //set backgroundColor
-  var backgroundColor = modalScript[0].getAttribute('data-background-color');
+  var backgroundColor = modalScript.getAttribute('data-background-color');
 
   if(!backgroundColor){
     backgroundColor = "#4186c7"
