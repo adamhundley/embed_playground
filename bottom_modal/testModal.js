@@ -7,12 +7,17 @@
 
   // modal style
   var modalStyle = '<style>' + 
-    '#fareharbor-modal{ z-index: 1; color:white; position: fixed; background-color: #4186c7; width: 100%; padding-bottom: 15px; }' +
+    '#fareharbor-modal{ z-index: 1; position: fixed; background-color: rgba(255,255,255, .9); width: 100%; padding-bottom: 15px; -webkit-box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); -moz-box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); }' +
 
-    '.loading{ display: none; }' + 
+    '#modal-header{font-color: black;}'+
 
     //Style Close X
-    '#close-icon{ width: 55px; display: block; float: right; margin-top: 5px; margin-right: 5px; padding: 3px; }' +
+    '#close-icon{ width: 35px; display: block; float: right; margin-top: 5px; margin-right: 5px; padding: 3px; }' +
+    
+    '.loading{ display: none; }' + 
+
+    '#book-buttons{ list-style-type: none; margin: 0; }' +
+    '.lists{ display: inline; padding-left: 100px; padding-right: 100px;}' +
     
     //Slide in CSS
     '.active {bottom: -300px; animation: active 2s 2s both; -webkit-animation: active 2s 2s both;}' +
@@ -30,7 +35,7 @@
     var modal = document.createElement('div');
     modal.className = 'loading';
     modal.id = 'fareharbor-modal';
-    modal.innerHTML = modalStyle + '<a href="javascript:void(0)"><img id="close-icon" src="http://halloooo.com/images/closeIcon.png"> </a><center><h2 id="modal-header">Advanced Purchase Required' + '</h2><table><tr><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/" class="fh-button" onclick="return !(window.FH && FH.open({ shortname:\'' + shortname + '\', fallback:\'simple\', view:\'items\' }));">Book Now</a></td><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/items/calendar/" onclick="return !(window.FH && FH.open({ shortname:\''+shortname+'\', fallback: \'simple\', view: \'all-availability\' }));" class="fh-button-red fh-button--cal">View Calendar</a></td></tr></table></center>'
+    modal.innerHTML = modalStyle + '<a href="javascript:void(0)"><img id="close-icon" src="https://openclipart.org/image/800px/svg_to_png/183568/close-button.png"></a><center><h2 id="modal-header">Advanced Purchase Required' + '</h2><ul id="book-buttons"><li class="lists"><a href="https://fareharbor.com/embeds/book/'+shortname+'/" class="fh-button" onclick="return !(window.FH && FH.open({ shortname:\'' + shortname + '\', fallback:\'simple\', view:\'items\' }));">Book Now</a></li><li class="lists"><a href="https://fareharbor.com/embeds/book/'+shortname+'/items/calendar/" onclick="return !(window.FH && FH.open({ shortname:\''+shortname+'\', fallback: \'simple\', view: \'all-availability\' }));" class="fh-button-red fh-button--cal">View Calendar</a></li></ul></center>'
 
     // add the modal to the page
     document.body.insertBefore(modal, document.body.lastChild);
