@@ -16,7 +16,7 @@
   var modalStyle = '<style>' + 
     '#fareharbor-modal{position: fixed; z-index: 1; bottom: 0; width: 100%; overflow: auto; }' + 
     
-    '#modal-content{z-index: -1; color:white; position: fixed; background-color: '+backgroundColor+
+    '#modal-content{z-index: 1; color:white; position: fixed; background-color: '+backgroundColor+
     '; width: 100%; padding-bottom: 15px; box-shadow: 0 1px 12px rgba(0, 0, 0, 0.21);}' +
 
     '.loading{display:none;}' + 
@@ -37,13 +37,13 @@
   
   var createFlyUpModal = function() {
     // cover screen with modal
-    var modalContainer = document.createElement('div');
-    modalContainer.id = 'fareharbor-modal';
+    var modal = document.createElement('div');
+    modal.id = 'modal-content';
     // insert actual modal
-    modalContainer.innerHTML = modalStyle + '<div class="loading" id="modal-content"><a href="javascript:void(0)" id="close"> x </a><center><h2 id="modal-header">Advanced Purchase Required' + '</h2><table><tr><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/" class="fh-button" onclick="return !(window.FH && FH.open({ shortname:\'' + shortname + '\', fallback:\'simple\', view:\'items\' }));">Book Now</a></td><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/items/calendar/" onclick="return !(window.FH && FH.open({ shortname:\''+shortname+'\', fallback: \'simple\', view: \'all-availability\' }));" class="fh-button-red fh-button--cal">View Calendar</a></td></tr></table></center></div>'
+    modal.innerHTML = modalStyle + '<a href="javascript:void(0)" id="close"> x </a><center><h2 id="modal-header">Advanced Purchase Required' + '</h2><table><tr><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/" class="fh-button" onclick="return !(window.FH && FH.open({ shortname:\'' + shortname + '\', fallback:\'simple\', view:\'items\' }));">Book Now</a></td><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/items/calendar/" onclick="return !(window.FH && FH.open({ shortname:\''+shortname+'\', fallback: \'simple\', view: \'all-availability\' }));" class="fh-button-red fh-button--cal">View Calendar</a></td></tr></table></center>'
 
     // add the modal to the page
-    document.body.insertBefore(modalContainer, document.body.firstChild);
+    document.body.insertBefore(modal, document.body.firstChild);
   }
   
   createFlyUpModal();
