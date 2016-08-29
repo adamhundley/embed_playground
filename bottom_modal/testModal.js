@@ -49,6 +49,7 @@
   createFlyUpModal();
   
   // Get the modal
+  var modal = document.getElementById('fareharbor-modal');
   var modalContent = document.getElementById('modal-content');
 
   // Get the (x) element that closes the modal
@@ -58,6 +59,6 @@
   window.onload = function() { modalContent.className="active" }
 
   // When the user clicks on (x), close the modal
-  close.onclick = function() { modalContent.className="hidden" }
+  close.onclick = function() { modalContent.className="hidden"; modal.style.height="0px"; }
 
 })();
