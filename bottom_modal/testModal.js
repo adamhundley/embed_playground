@@ -38,7 +38,7 @@
     var modalContainer = document.createElement('div');
     modalContainer.id = 'fareharbor-modal';
     // insert actual modal
-    modalContainer.innerHTML = modalStyle + '<div id="modal-content"><span id="close"> x </span><center><h2 id="modal-header">Advanced Purchase Required' + '</h2><table><tr><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/" class="fh-button" onclick="return !(window.FH && FH.open({ shortname:\'' + shortname + '\', fallback:\'simple\', view:\'items\' }));">Book Now</a></td><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/items/calendar/" onclick="return !(window.FH && FH.open({ shortname:\''+shortname+'\', fallback: \'simple\', view: \'all-availability\' }));" class="fh-button-red fh-button--cal">View Calendar</a></td></tr></table></center></div>'
+    modalContainer.innerHTML = modalStyle + '<div id="modal-content"><a href="#" id="close"> x </a><center><h2 id="modal-header">Advanced Purchase Required' + '</h2><table><tr><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/" class="fh-button" onclick="return !(window.FH && FH.open({ shortname:\'' + shortname + '\', fallback:\'simple\', view:\'items\' }));">Book Now</a></td><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/items/calendar/" onclick="return !(window.FH && FH.open({ shortname:\''+shortname+'\', fallback: \'simple\', view: \'all-availability\' }));" class="fh-button-red fh-button--cal">View Calendar</a></td></tr></table></center></div>'
 
     // add the modal to the page
     document.body.insertBefore(modalContainer, document.body.firstChild);
