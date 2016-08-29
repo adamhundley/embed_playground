@@ -59,6 +59,6 @@
   window.onload = function() { modalContent.className="active" }
 
   // When the user clicks on (x), close the modal
-  close.onclick = function() { modalContent.className="hidden"; modal.style.height="0px"; }
+  close.onclick = function() { modalContent.className="hidden" }
 
 })();
