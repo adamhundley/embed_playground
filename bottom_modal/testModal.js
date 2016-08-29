@@ -16,7 +16,7 @@
   var modalStyle = '<style>' + 
     '#fareharbor-modal{position: fixed; z-index: 1; bottom: 0; width: 100%; height: 150px; overflow: auto; }' + 
     
-    '#modal-content{z-index: 1; color:white; position: fixed; background-color: '+backgroundColor+
+    '#modal-content{z-index: -1; color:white; position: fixed; background-color: '+backgroundColor+
     '; width: 100%; padding-bottom: 15px;}' +
 
     '.loading{display:none;}' + 
