@@ -30,6 +30,7 @@
     // create modal
     var modal = document.createElement('div');
     modal.id = 'fareharbor-modal';
+    modal.className = 'loading';
     modal.innerHTML = modalStyle + '<a href="javascript:void(0)" id="close"><img id="close-icon" src="http://halloooo.com/images/closeIcon.png"> </a><center><h2 id="modal-header">Advanced Purchase Required' + '</h2><table><tr><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/" class="fh-button" onclick="return !(window.FH && FH.open({ shortname:\'' + shortname + '\', fallback:\'simple\', view:\'items\' }));">Book Now</a></td><td><a href="https://fareharbor.com/embeds/book/'+shortname+'/items/calendar/" onclick="return !(window.FH && FH.open({ shortname:\''+shortname+'\', fallback: \'simple\', view: \'all-availability\' }));" class="fh-button-red fh-button--cal">View Calendar</a></td></tr></table></center>'
 
     // add the modal to the page
