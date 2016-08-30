@@ -7,16 +7,16 @@
 
   // modal style
   var modalStyle = '<style>' + 
-    '#fareharbor-modal{ z-index: -1; position: fixed; background-color: rgba(255,255,255, .9); width: 100%; padding-bottom: 15px; -webkit-box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); -moz-box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); }' +
+    '#fareharbor-modal{ z-index: 1; position: fixed; background-color: rgba(255,255,255, .9); width: 100%; padding-bottom: 15px; -webkit-box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); -moz-box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); }' +
 
-    '#modal-header{font-color: black;}'+
+    '#modal-header{z-index: 1; font-color: black; }'+
 
     //Style Close X
-    '#close-icon{ width: 35px; display: block; float: right; margin-top: 5px; margin-right: 5px; padding: 3px; }' +
+    '#close-icon{ z-index: 1; width: 35px; display: block; float: right; margin-top: 5px; margin-right: 5px; padding: 3px; }' +
     
     '.loading{ display: none; }' + 
 
-    '#book-buttons{ list-style-type: none; margin: 0; }' +
+    '#book-buttons{ z-index: 1; list-style-type: none; margin: 0; }' +
     '.lists{ display: inline; padding-left: 100px; padding-right: 100px;}' +
     
     //Slide in CSS
