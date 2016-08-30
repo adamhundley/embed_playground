@@ -38,7 +38,7 @@
     modal.innerHTML = modalStyle + '<link rel="stylesheet" href="https://fh-kit.com/buttons/v1/?red=f70000" type="text/css" media="screen" /><a href="javascript:void(0)"><img id="close-icon" src="https://openclipart.org/image/800px/svg_to_png/183568/close-button.png"></a><center><h2 id="modal-header">Advanced Purchase Required' + '</h2><ul id="book-buttons"><li class="lists"><a href="https://fareharbor.com/embeds/book/'+shortname+'/" class="fh-button fh-button--check" onclick="return !(window.FH && FH.open({ shortname:\'' + shortname + '\', fallback:\'simple\', view:\'items\' }));">Book Now</a></li><li class="lists"><a href="https://fareharbor.com/embeds/book/'+shortname+'/items/calendar/" onclick="return !(window.FH && FH.open({ shortname:\''+shortname+'\', fallback: \'simple\', view: \'all-availability\' }));" class="fh-button-red fh-button--cal">View Calendar</a></li></ul></center>'
 
     // add the modal to the page
-    document.body.insertBefore(modal, document.body.lastChild);
+    document.body.insertBefore(modal, document.body.childNodes[-1]);
   }
   
   createFlyUpModal();
