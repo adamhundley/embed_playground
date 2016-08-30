@@ -7,7 +7,7 @@
 
   // modal style
   var modalStyle = '<style>' + 
-    '#fareharbor-modal{ z-index: 1; position: fixed; background-color: rgba(255,255,255, .9); width: 100%; padding-bottom: 15px; -webkit-box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); -moz-box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); }' +
+    '#fareharbor-modal{ z-index: -1; position: fixed; background-color: rgba(255,255,255, .9); width: 100%; padding-bottom: 15px; -webkit-box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); -moz-box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); box-shadow: -1px -4px 25px 2px rgba(0,0,0,0.63); }' +
 
     '#modal-header{font-color: black;}'+
 
